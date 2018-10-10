@@ -241,6 +241,7 @@
       setMultipleContentByValue () {
         if (!this.localValue) {
           this.initialLocalValueByDefault()
+          return;
         }
 
         let content = []
@@ -283,9 +284,9 @@
         let isArray = Array.isArray(this.localValue)
 
         if (this.multiple && !isArray) {
-          this.localValue = this.setLocalValueIfMultiple()
+          this.setLocalValueIfMultiple()
         } else if (!this.multiple && isArray) {
-          this.localValue = this.setLocalValueIfNotMultiple()
+          this.setLocalValueIfNotMultiple()
         }
       },
       emitSelected (value) {
