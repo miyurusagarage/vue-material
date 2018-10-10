@@ -14,7 +14,7 @@
   export default {
     name: 'MdOption',
     props: {
-      value: [String, Number, Boolean],
+      value: [String, Number, Boolean, Object],
       disabled: Boolean
     },
     inject: {
